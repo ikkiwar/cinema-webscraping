@@ -1,0 +1,35 @@
+.p-menubar {
+  background: linear-gradient(90deg, #000, #002169) !important;
+}
+
+.p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+  background: black !important;
+}
+
+.p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link
+  .p-menuitem-text {
+  color: white !important;
+}
+
+.p-menubar
+  .p-menubar-root-list
+  > .p-menuitem.p-menuitem-active
+  > .p-menuitem-link,
+.p-menubar
+  .p-menubar-root-list
+  > .p-menuitem.p-menuitem-active
+  > .p-menuitem-link:not(.p-disabled):hover {
+  background: rgba(40, 29, 78, 0.9599999785423279) !important;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  background: black !important;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:hover {
+  border: 2px solid white;
+  border-radius: 7px;
+}

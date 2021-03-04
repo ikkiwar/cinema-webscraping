@@ -1,7 +1,12 @@
-import React from "react";
-
+import React, { Fragment } from "react";
+import Menu from "../../components/menu/menu";
+import "../home/home.css";
 const Home = () => {
-  return <div>estoy en HOme wii</div>;
+  return (
+    <div className="home-style">
+      <Menu />
+    </div>
+  );
 };
 
 export default Home;
