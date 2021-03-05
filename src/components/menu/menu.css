@@ -33,3 +33,10 @@
   border: 2px solid white;
   border-radius: 7px;
 }
+
+.p-menubar .p-menubar-custom,
+.p-menubar .p-menubar-end {
+  color: white;
+  font-weight: 600;
+  margin-right: 100px;
+}

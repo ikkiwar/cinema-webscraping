@@ -7,9 +7,10 @@ const Menu = () => {
   const start = (
     <img alt="logo" src={Movie} height="60" className="p-mr-2"></img>
   );
+  const end = <span>Cinema WebScrapping</span>;
   return (
     <div className="card">
-      <Menubar model={items} start={start} />
+      <Menubar model={items} start={start} end={end} />
     </div>
   );
 };
