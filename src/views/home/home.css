@@ -1,3 +1,37 @@
 .home-style {
-  background: linear-gradient(180deg, #002169 0, #000) !important;
+  height: 98vh;
+  background: url(../../assets/images/chair.png);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.home-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-body .p-button.p-button-rounded {
+  background: #ac3038;
+  color: white;
+  border: 1px solid #ac3038;
+  font-size: 30px;
+  height: 65px;
+  width: 400px;
+}
+
+.home-body .p-button.p-button-rounded:hover {
+  background: #df5a28;
+  border: 1px solid #df5a28;
+}
+.home-body .presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+.home-body .presentation .text-Presentation {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 800;
 }

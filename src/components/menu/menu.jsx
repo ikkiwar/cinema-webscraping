@@ -5,12 +5,17 @@ import Movie from "../../assets/images/movie.png";
 import "../menu/menu.css";
 const Menu = () => {
   const start = (
-    <img alt="logo" src={Movie} height="60" className="p-mr-2"></img>
+    <div className="tittle-menu">
+      <img alt="logo" src={Movie} height="40" className="p-mr-2"></img>
+      <a style={{ marginLeft: "5px" }} href="/">
+        Cinema WebScrapping
+      </a>
+    </div>
   );
-  const end = <span>Cinema WebScrapping</span>;
+
   return (
     <div className="card">
-      <Menubar model={items} start={start} end={end} />
+      <Menubar model={items} start={start} />
     </div>
   );
 };
