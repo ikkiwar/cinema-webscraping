@@ -3,6 +3,7 @@ import Menu from "../../components/menu/menu";
 import "../home/home.css";
 import Loader from "../../components/loader/loader";
 import { Column } from "primereact/column";
+import { DataTable } from "primereact/datatable";
 
 export default function Schedule() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,11 +26,11 @@ export default function Schedule() {
           <Loader />
         ) : (
           <div>
-            {/* <DataTable>
+            <DataTable value={[]} emptyMessage="No se encontraron Horarios">
               <Column field="name" header="Name"></Column>
               <Column field="size" header="Size"></Column>
               <Column field="type" header="Type"></Column>
-            </DataTable> */}
+            </DataTable>
           </div>
         )}
       </div>
