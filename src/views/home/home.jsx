@@ -1,7 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Menu from "../../components/menu/menu";
 import "../home/home.css";
 import { Button } from "primereact/button";
+
 const Home = () => {
   return (
     <div className="home-style">
@@ -17,6 +18,9 @@ const Home = () => {
           <Button
             label="Ver Horarios de Carteleras"
             className="p-button-rounded"
+            onClick={() => {
+              window.location.href = "http://localhost:3000/schedule";
+            }}
           />
         </div>
       </div>

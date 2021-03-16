@@ -43,9 +43,9 @@
   background: rgba(40, 29, 78, 0.9599999785423279) !important;
 }
 
-.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
-  /* background: black !important; */
-}
+/* .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+   background: black !important; 
+} */
 
 .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:hover {
   background: #b33e10 !important;
