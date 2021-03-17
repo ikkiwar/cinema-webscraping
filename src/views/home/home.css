@@ -35,3 +35,42 @@
   text-align: center;
   font-weight: 800;
 }
+
+.schedule-table{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+ /*  height: 801px;
+  overflow-y: scroll; */
+}
+
+.schedule-table p {
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.schedule-table .p-treetable .p-treetable-thead > tr > th{
+  color: #df5a28;
+  background: black;
+  border: 1px solid #df5a28;
+  border-width: 0 1px 1px 0;
+  text-align: center !important;
+
+}
+
+.schedule-table .p-treetable .p-treetable-tbody > tr > td{
+  border-width: 0 1px 1px 0;
+  text-align: center;
+}
+
+.schedule-table .text-left {
+  text-align: left !important;
+}
+
+.schedule-table .p-treetable-scrollable-header-box{
+  margin-right: 0px !important;
+}

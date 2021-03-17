@@ -3,8 +3,8 @@ import Menu from "../../components/menu/menu";
 import "../home/home.css";
 import Loader from "../../components/loader/loader";
 import { Column } from "primereact/column";
-import { DataTable } from "primereact/datatable";
-
+import { TreeTable } from "primereact/treetable";
+import { dummyData } from "../schedule/dummyData";
 export default function Schedule() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,12 +25,24 @@ export default function Schedule() {
         {isLoading ? (
           <Loader />
         ) : (
-          <div>
-            <DataTable value={[]} emptyMessage="No se encontraron Horarios">
-              <Column field="name" header="Name"></Column>
-              <Column field="size" header="Size"></Column>
-              <Column field="type" header="Type"></Column>
-            </DataTable>
+          <div className="schedule-table">
+            <p>Horarios Disponibles</p>
+            <TreeTable
+              value={dummyData}
+              emptyMessage="No se encontraron Horarios"
+              scrollable
+              scrollHeight="600px"
+            >
+              <Column
+                field="cine"
+                header="Cine"
+                className="text-left"
+                expander
+              ></Column>
+              <Column field="pelicula" header="Pelicula"></Column>
+              <Column field="sala" header="Sala"></Column>
+              <Column field="horario" header="Horario"></Column>
+            </TreeTable>
           </div>
         )}
       </div>
