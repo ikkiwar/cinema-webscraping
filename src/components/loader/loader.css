@@ -1,10 +1,8 @@
-.loader{
-    display: flex;
-    justify-content: center;
-    margin-top: 15%;
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
 }
-.loader img{
-    border-radius: 50%;
-    width: 283px;
-    height: 269px;
+.loader img {
+  width: 283px;
 }

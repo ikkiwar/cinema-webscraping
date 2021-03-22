@@ -36,14 +36,14 @@
   font-weight: 800;
 }
 
-.schedule-table{
+.schedule-table {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 3%;
- /*  height: 801px;
+  /*  height: 801px;
   overflow-y: scroll; */
 }
 
@@ -53,24 +53,55 @@
   font-weight: 800;
 }
 
-.schedule-table .p-treetable .p-treetable-thead > tr > th{
+.schedule-table .p-treetable .p-treetable-thead > tr > th {
   color: #df5a28;
   background: black;
   border: 1px solid #df5a28;
   border-width: 0 1px 1px 0;
   text-align: center !important;
-
 }
 
-.schedule-table .p-treetable .p-treetable-tbody > tr > td{
+.schedule-table .p-treetable .p-treetable-tbody > tr > td {
   border-width: 0 1px 1px 0;
   text-align: center;
+  font-weight: 600;
 }
 
 .schedule-table .text-left {
   text-align: left !important;
 }
 
-.schedule-table .p-treetable-scrollable-header-box{
-  margin-right: 0px !important;
+.schedule-table .p-treetable-scrollable-header-box {
+  /* margin-right: 0px !important; */
+}
+
+.schedule-table .p-treetable .p-treetable-scrollable-header {
+  background: black;
+}
+
+.schedule-table .export-btn {
+  display: flex;
+  justify-content: right;
+  margin-right: 2px;
+  margin-bottom: 1px;
+}
+
+.schedule-table .export-btn .p-button {
+  background: green;
+  border-color: green;
+}
+
+.schedule-table .export-btn .p-button:hover {
+  background: green;
+  border-color: green;
+}
+
+.calendar-format .p-button {
+  background: #df5a28;
+  border-color: #df5a28;
+}
+
+.calendar-format .p-button:enabled:hover {
+  background: #df5a28;
+  border-color: #df5a28;
 }

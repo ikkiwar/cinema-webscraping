@@ -6,8 +6,11 @@ import { Column } from "primereact/column";
 import { TreeTable } from "primereact/treetable";
 import { dummyData } from "../schedule/dummyData";
 import { Button } from "primereact/button";
-export default function Schedule() {
+import { Calendar } from "primereact/calendar";
+
+const Historico = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [dateSelected, setDateSelected] = useState(new Date());
 
   useEffect(() => {
     redirect();
@@ -27,7 +30,14 @@ export default function Schedule() {
           <Loader />
         ) : (
           <div className="schedule-table">
-            <p>Horarios Disponibles</p>
+            <div className="calendar-format">
+              <Calendar
+                value={dateSelected}
+                onChange={(e) => setDateSelected(e.value)}
+                showIcon
+                dateFormat="dd/mm/yy"
+              />
+            </div>
 
             <div className="export-btn">
               <Button label="Exportar" icon="pi pi-table" iconPos="right" />
@@ -53,4 +63,6 @@ export default function Schedule() {
       </div>
     </div>
   );
-}
+};
+
+export default Historico;

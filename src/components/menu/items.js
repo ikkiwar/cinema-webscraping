@@ -7,5 +7,6 @@ export const items = [
   {
     label: "Historico de Horarios",
     icon: "pi pi-fw pi-calendar",
+    url: "http://localhost:3000/history",
   },
 ];
