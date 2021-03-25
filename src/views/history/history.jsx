@@ -9,17 +9,28 @@ import { Button } from "primereact/button";
 import { Calendar } from "primereact/calendar";
 
 const Historico = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [dateSelected, setDateSelected] = useState(new Date());
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    redirect();
+    getHistoryData(dateSelected);
   }, []);
 
-  const redirect = () => {
-    setTimeout(function () {
-      setIsLoading(false);
-    }, 3000);
+  const getHistoryData = (date) => {
+    console.log(date);
+    let heads = new Headers();
+    heads.append("content-type", "application/json");
+    setIsLoading(true);
+    fetch(`https://pokeapi.co/api/v2/pokemon/ditto`, {
+      method: "GET",
+      headers: heads,
+    }).then((response) => {
+      response.json().then((res) => {
+        setData(res);
+        setIsLoading(false);
+      });
+    });
   };
 
   return (
@@ -33,7 +44,10 @@ const Historico = () => {
             <div className="calendar-format">
               <Calendar
                 value={dateSelected}
-                onChange={(e) => setDateSelected(e.value)}
+                onChange={(e) => {
+                  setDateSelected(e.value);
+                  getHistoryData(e.value);
+                }}
                 showIcon
                 dateFormat="dd/mm/yy"
               />
