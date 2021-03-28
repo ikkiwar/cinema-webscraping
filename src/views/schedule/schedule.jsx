@@ -11,7 +11,6 @@ import { saveAs } from "file-saver";
 export default function Schedule() {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
-  /* const tableData = useRef(null); */
 
   useEffect(() => {
     getCurrentData();
@@ -21,7 +20,7 @@ export default function Schedule() {
     let heads = new Headers();
     heads.append("content-type", "application/json");
     setIsLoading(true);
-    fetch(`https://pokeapi.co/api/v2/pokemon/ditto`, {
+    fetch(`http://25.29.176.54:8000/cinepolis/peliculas`, {
       method: "GET",
       headers: heads,
     }).then((response) => {
