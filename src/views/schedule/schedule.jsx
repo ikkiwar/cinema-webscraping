@@ -20,7 +20,7 @@ export default function Schedule() {
     let heads = new Headers();
     heads.append("content-type", "application/json");
     setIsLoading(true);
-    fetch(`http://25.29.176.54:8000/cinepolis/peliculas`, {
+    fetch(`http://localhost:8000/cinepolis/peliculas`, {
       method: "GET",
       headers: heads,
     }).then((response) => {

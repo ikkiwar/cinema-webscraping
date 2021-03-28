@@ -14,15 +14,29 @@ const Historico = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getHistoryData(dateSelected);
+    /* getHistoryData(ymdFormat(dateSelected)); */
   }, []);
 
+  const ymdFormat = (date = new Date(), lang = "es-ES") => {
+    let year = new Date(date).toLocaleDateString(lang, {
+      year: "numeric",
+    });
+
+    let month = new Date(date).toLocaleDateString(lang, {
+      month: "numeric",
+    });
+
+    let format = `${year}-${month > 9 ? month : 0 + month}-01`;
+
+    return format;
+  };
+
   const getHistoryData = (date) => {
-    console.log(date);
+    console.log(ymdFormat(date));
     let heads = new Headers();
     heads.append("content-type", "application/json");
     setIsLoading(true);
-    fetch(`https://pokeapi.co/api/v2/pokemon/ditto`, {
+    fetch(`http://localhost:8000/cinepolis/pelicula?fecha=${ymdFormat(date)}`, {
       method: "GET",
       headers: heads,
     }).then((response) => {
