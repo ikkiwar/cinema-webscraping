@@ -53,7 +53,7 @@
   font-weight: 800;
 }
 
-.schedule-table .p-treetable .p-treetable-thead > tr > th {
+.schedule-table .p-datatable .p-datatable-thead > tr > th {
   color: #df5a28;
   background: black;
   border: 1px solid #df5a28;
@@ -61,7 +61,7 @@
   text-align: center !important;
 }
 
-.schedule-table .p-treetable .p-treetable-tbody > tr > td {
+.schedule-table .p-datatable .p-datatable-tbody > tr > td {
   border-width: 0 1px 1px 0;
   text-align: center;
   font-weight: 600;
@@ -75,7 +75,7 @@
   /* margin-right: 0px !important; */
 }
 
-.schedule-table .p-treetable .p-treetable-scrollable-header {
+.schedule-table .p-datatable .p-datatable-scrollable-header {
   background: black;
 }
 

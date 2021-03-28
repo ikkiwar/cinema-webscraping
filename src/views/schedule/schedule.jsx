@@ -3,10 +3,11 @@ import Menu from "../../components/menu/menu";
 import "../home/home.css";
 import Loader from "../../components/loader/loader";
 import { Column } from "primereact/column";
-import { TreeTable } from "primereact/treetable";
+import { DataTable } from "primereact/datatable";
 import { dummyData } from "../schedule/dummyData";
 import { Button } from "primereact/button";
 import xlsx from "xlsx";
+import { dataFormater } from "../utils";
 export default function Schedule() {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
@@ -29,7 +30,6 @@ export default function Schedule() {
       });
     });
   };
-  console.log(data);
 
   const exportToXlsx = () => {
     let table = document.getElementById("tableData");
@@ -52,29 +52,28 @@ export default function Schedule() {
             <div className="export-btn">
               <Button
                 label="Exportar"
-                icon="pi pi-table"
+                icon="pi pi-file-excel"
                 iconPos="right"
                 onClick={exportToXlsx}
               />
             </div>
-            <TreeTable
-              value={dummyData}
+            <DataTable
+              value={dataFormater(data)}
               emptyMessage="No se encontraron Horarios"
               scrollable
               scrollHeight="600px"
               id="tableData"
-              /* ref={tableData} */
             >
               <Column
-                field="cine"
+                field="cinema"
                 header="Cine"
                 className="text-left"
-                expander
               ></Column>
-              <Column field="pelicula" header="Pelicula"></Column>
+              <Column field="movie" header="Pelicula"></Column>
+              <Column field="hour" header="Horario"></Column>
               <Column field="sala" header="Sala"></Column>
-              <Column field="horario" header="Horario"></Column>
-            </TreeTable>
+              <Column field="assistance" header="Asistencia"></Column>
+            </DataTable>
           </div>
         )}
       </div>
