@@ -7,7 +7,6 @@ import { TreeTable } from "primereact/treetable";
 import { dummyData } from "../schedule/dummyData";
 import { Button } from "primereact/button";
 import xlsx from "xlsx";
-import { saveAs } from "file-saver";
 export default function Schedule() {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);

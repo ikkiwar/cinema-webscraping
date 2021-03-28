@@ -15,7 +15,8 @@ const Historico = () => {
 
   useEffect(() => {
     /* getHistoryData(ymdFormat(dateSelected)); */
-  }, []);
+    console.log(data);
+  }, [data]);
 
   const ymdFormat = (date = new Date(), lang = "es-ES") => {
     let year = new Date(date).toLocaleDateString(lang, {
