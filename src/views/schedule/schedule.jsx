@@ -63,6 +63,8 @@ export default function Schedule() {
               scrollable
               scrollHeight="600px"
               id="tableData"
+              rowGroupMode="rowspan"
+              groupField="cinema"
             >
               <Column
                 field="cinema"
