@@ -10,7 +10,7 @@ import xlsx from "xlsx";
 import { dataFormater, ymdFormat } from "../utils";
 export default function Schedule() {
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
 
   useEffect(() => {
     getCurrentData();

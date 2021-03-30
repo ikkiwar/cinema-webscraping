@@ -13,7 +13,7 @@ import xlsx from "xlsx";
 const Historico = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [dateSelected, setDateSelected] = useState(new Date());
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
 
   const exportToXlsx = () => {
     let table = document.getElementById("tableData");

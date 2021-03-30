@@ -1,17 +1,19 @@
 export const dataFormater = (data) => {
   let dataFormat = [];
 
-  data.forEach((movie) => {
-    dataFormat.push({
-      nombre: movie.nombre,
-      sucursal:
-        movie.sucursal === "MiCine" ? "Cinepolis Santa Ana" : movie.sucursal,
-      fecha: movie.fecha,
-      sala: movie.sala,
-      hora: movie.hora,
-      asistencias: movie.asistencias,
+  if (data) {
+    data.forEach((movie) => {
+      dataFormat.push({
+        nombre: movie.nombre,
+        sucursal:
+          movie.sucursal === "MiCine" ? "Cinepolis Santa Ana" : movie.sucursal,
+        fecha: movie.fecha,
+        sala: movie.sala,
+        hora: movie.hora,
+        asistencias: movie.asistencias,
+      });
     });
-  });
+  }
 
   return dataFormat;
 };
