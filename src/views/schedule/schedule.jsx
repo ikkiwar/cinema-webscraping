@@ -7,7 +7,7 @@ import { DataTable } from "primereact/datatable";
 import { dummyData } from "../schedule/dummyData";
 import { Button } from "primereact/button";
 import xlsx from "xlsx";
-import { dataFormater } from "../utils";
+import { dataFormater, ymdFormat } from "../utils";
 export default function Schedule() {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
@@ -20,10 +20,13 @@ export default function Schedule() {
     let heads = new Headers();
     heads.append("content-type", "application/json");
     setIsLoading(true);
-    fetch(`http://localhost:8000/cinepolis/peliculas`, {
-      method: "GET",
-      headers: heads,
-    }).then((response) => {
+    fetch(
+      `http://localhost:8000/cinepolis/pelicula?fecha=${ymdFormat(new Date())}`,
+      {
+        method: "GET",
+        headers: heads,
+      }
+    ).then((response) => {
       response.json().then((res) => {
         setData(res);
         setIsLoading(false);
@@ -61,10 +64,13 @@ export default function Schedule() {
               value={dataFormater(data)}
               emptyMessage="No se encontraron Horarios"
               scrollable
-              scrollHeight="600px"
+              scrollHeight="450px"
               id="tableData"
               rowGroupMode="rowspan"
               groupField="cinema"
+              sortMode="single"
+              sortField="cinema"
+              sortOrder={1}
             >
               <Column
                 field="cinema"

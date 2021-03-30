@@ -7,31 +7,13 @@ import { DataTable } from "primereact/datatable";
 import { dummyData } from "../schedule/dummyData";
 import { Button } from "primereact/button";
 import { Calendar } from "primereact/calendar";
-import { dataFormater } from "../utils";
+import { dataFormater, ymdFormat } from "../utils";
 import xlsx from "xlsx";
 
 const Historico = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [dateSelected, setDateSelected] = useState(new Date());
   const [data, setData] = useState([]);
-
-  const ymdFormat = (date, lang = "es-ES") => {
-    let year = new Date(date).toLocaleDateString(lang, {
-      year: "numeric",
-    });
-
-    let month = new Date(date).toLocaleDateString(lang, {
-      month: "numeric",
-    });
-
-    let day = new Date(date).toLocaleDateString(lang, {
-      day: "2-digit",
-    });
-
-    let format = `${year}-${month > 9 ? month : 0 + month}-${day}`;
-
-    return format;
-  };
 
   const exportToXlsx = () => {
     let table = document.getElementById("tableData");
@@ -56,8 +38,6 @@ const Historico = () => {
       });
     });
   };
-
-  console.log(data);
 
   return (
     <div className="home-style">
@@ -91,10 +71,13 @@ const Historico = () => {
               value={dataFormater(data)}
               emptyMessage="No se encontraron Horarios"
               scrollable
-              scrollHeight="600px"
+              scrollHeight="450px"
               id="tableData"
               rowGroupMode="rowspan"
               groupField="cinema"
+              sortMode="single"
+              sortField="cinema"
+              sortOrder={1}
             >
               <Column
                 field="cinema"
