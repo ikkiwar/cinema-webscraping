@@ -71,10 +71,6 @@
   text-align: left !important;
 }
 
-.schedule-table .p-treetable-scrollable-header-box {
-  /* margin-right: 0px !important; */
-}
-
 .schedule-table .p-datatable .p-datatable-scrollable-header {
   background: black;
 }
@@ -104,4 +100,22 @@
 .calendar-format .p-button:enabled:hover {
   background: #df5a28;
   border-color: #df5a28;
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1500px) {
+  .home-body .presentation .text-Presentation {
+    font-size: 18px;
+  }
+
+  .home-body .presentation {
+    margin-top: 10%;
+    margin-left: 18%;
+    max-width: 890px;
+  }
+
+  .home-body .p-button.p-button-rounded {
+    font-size: 25px;
+    height: 65px;
+    width: 350px;
+  }
 }
