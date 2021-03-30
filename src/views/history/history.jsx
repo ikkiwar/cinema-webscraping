@@ -88,7 +88,7 @@ const Historico = () => {
               scrollable
               scrollHeight="450px"
               id="tableData"
-              rowGroupMode="rowspan"
+              rowGroupMode="subheader"
               groupField="sucursal"
               sortMode="single"
               sortField="sucursal"
