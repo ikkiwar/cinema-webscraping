@@ -42,6 +42,21 @@ export default function Schedule() {
     xlsx.writeFile(book, "horario.xlsx");
   };
 
+  const headerTemplate = (data) => {
+    return (
+      <React.Fragment>
+        <span style={{ textAlign: "right" }}>{data.cinema}</span>
+      </React.Fragment>
+    );
+  };
+  const footerTemplate = (data) => {
+    return (
+      <React.Fragment>
+        <td colSpan="5" style={{ textAlign: "right" }}></td>
+      </React.Fragment>
+    );
+  };
+
   return (
     <div className="home-style">
       <Menu />
@@ -66,11 +81,13 @@ export default function Schedule() {
               scrollable
               scrollHeight="450px"
               id="tableData"
-              rowGroupMode="rowspan"
+              rowGroupMode="subheader"
               groupField="cinema"
               sortMode="single"
               sortField="cinema"
               sortOrder={1}
+              rowGroupHeaderTemplate={headerTemplate}
+              rowGroupFooterTemplate={footerTemplate}
             >
               <Column
                 field="cinema"

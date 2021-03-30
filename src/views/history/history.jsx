@@ -39,6 +39,21 @@ const Historico = () => {
     });
   };
 
+  const headerTemplate = (data) => {
+    return (
+      <React.Fragment>
+        <span style={{ textAlign: "right" }}>{data.cinema}</span>
+      </React.Fragment>
+    );
+  };
+  const footerTemplate = (data) => {
+    return (
+      <React.Fragment>
+        <td colSpan="5" style={{ textAlign: "right" }}></td>
+      </React.Fragment>
+    );
+  };
+
   return (
     <div className="home-style">
       <Menu />
@@ -78,6 +93,8 @@ const Historico = () => {
               sortMode="single"
               sortField="cinema"
               sortOrder={1}
+              rowGroupHeaderTemplate={headerTemplate}
+              rowGroupFooterTemplate={footerTemplate}
             >
               <Column
                 field="cinema"
