@@ -6,7 +6,7 @@ export const dataFormater = (data) => {
     let movies = cinema.peliculas;
     movies.forEach((movie) => {
       dataFormat.push({
-        cinema: sucursal,
+        cinema: sucursal === "MiCine" ? "Cinepolis Santa Ana" : sucursal,
         movie: movie.nombre,
         sala: movie.sala,
         hour: movie.hora,
