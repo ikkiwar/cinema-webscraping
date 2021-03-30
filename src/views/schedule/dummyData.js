@@ -1,44 +1,13 @@
-export const dummyData = [
-  { assistance: 5, cinema: "MiCine", hour: "12:00", movie: "prueba", sala: 1 },
-  { assistance: 5, cinema: "MiCine", hour: "12:00", movie: "prueba3", sala: 1 },
-  { assistance: 5, cinema: "MiCine", hour: "12:00", movie: "prueba4", sala: 1 },
-  { assistance: 5, cinema: "MiCine", hour: "12:00", movie: "prueba3", sala: 1 },
-  { assistance: 5, cinema: "MiCine", hour: "12:00", movie: "prueba4", sala: 1 },
-  { assistance: 5, cinema: "MiCine", hour: "12:00", movie: "prueba3", sala: 1 },
-  { assistance: 5, cinema: "MiCine", hour: "12:00", movie: "prueba4", sala: 1 },
-  {
-    assistance: 5,
-    cinema: "Cinépolis Galerías",
-    hour: "12:00",
-    movie: "prueba5",
-    sala: 1,
-  },
-  {
-    assistance: 5,
-    cinema: "Cinépolis Galerías",
-    hour: "12:00",
-    movie: "prueba6",
-    sala: 1,
-  },
-  {
-    assistance: 5,
-    cinema: "Cinépolis VIP",
-    hour: "12:00",
-    movie: "prueba7",
-    sala: 1,
-  },
-  {
-    assistance: 10,
-    cinema: "Cinépolis Galerías",
-    hour: "13:00",
-    movie: "Gozila vs Kong",
-    sala: 2,
-  },
-  {
-    assistance: 40,
-    cinema: "Cinépolis VIP",
-    hour: "15:00",
-    movie: "prueba2",
-    sala: 10,
-  },
-];
+export const dummyData = {
+  data: [
+    {
+      nombre: "prueba",
+      ciudad: "Santa Ana",
+      sucursal: "MiCine",
+      fecha: "2021-03-30",
+      sala: 2,
+      hora: "22:25",
+      asistencias: 0,
+    },
+  ],
+};

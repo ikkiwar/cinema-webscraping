@@ -83,7 +83,7 @@ const Historico = () => {
               />
             </div>
             <DataTable
-              value={dataFormater(data)}
+              value={dataFormater(data.data)}
               emptyMessage="No se encontraron Horarios"
               scrollable
               scrollHeight="450px"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "../../components/menu/menu";
 import "../home/home.css";
 import Loader from "../../components/loader/loader";
@@ -45,7 +45,7 @@ export default function Schedule() {
   const headerTemplate = (data) => {
     return (
       <React.Fragment>
-        <span style={{ textAlign: "right" }}>{data.cinema}</span>
+        <span style={{ textAlign: "right" }}>{data.sucursal}</span>
       </React.Fragment>
     );
   };
@@ -76,28 +76,28 @@ export default function Schedule() {
               />
             </div>
             <DataTable
-              value={dataFormater(data)}
+              value={dataFormater(data.data)}
               emptyMessage="No se encontraron Horarios"
               scrollable
               scrollHeight="450px"
               id="tableData"
               rowGroupMode="subheader"
-              groupField="cinema"
+              groupField="sucursal"
               sortMode="single"
-              sortField="cinema"
+              sortField="sucursal"
               sortOrder={1}
               rowGroupHeaderTemplate={headerTemplate}
               rowGroupFooterTemplate={footerTemplate}
             >
               <Column
-                field="cinema"
+                field="sucursal"
                 header="Cine"
                 className="text-left"
               ></Column>
-              <Column field="movie" header="Pelicula"></Column>
-              <Column field="hour" header="Horario"></Column>
+              <Column field="nombre" header="Pelicula"></Column>
+              <Column field="hora" header="Horario"></Column>
               <Column field="sala" header="Sala"></Column>
-              <Column field="assistance" header="Asistencia"></Column>
+              <Column field="asistencias" header="Asistencia"></Column>
             </DataTable>
           </div>
         )}
