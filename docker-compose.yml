@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+  app:
+    image: "cinema"
+    build: ./
+    container_name: "ciname-web"
+    volumes:
+      - ./:/app:cached
+    working_dir: /app
+    ports:
+      - 3000:3000
+    command: npm start
+    tty: true
